@@ -2,6 +2,7 @@ package projeto01_medidor_de_pressão;
 
 public class MedidorDePressao {
 	
+	private static String situacao;
 	/**
 	 * Informações:
 	 * 
@@ -92,15 +93,18 @@ public class MedidorDePressao {
 	
 	// Construtor
 	
-	public MedidorDePressao(int idPaciente, String nome, String sexo, int idade, double pad, double pas) {
+	public MedidorDePressao(int idPaciente, String sexo, String nome, int idadeGestacional, int idade, double pas, double pad) {
+		super();
 		this.idPaciente = idPaciente;
 		this.nome = nome;
 		this.sexo = sexo;
 		this.idade = idade;
+		this.idadeGestacional = idadeGestacional;
+		//this.classificacao = classificacao;
 		this.pad = pad;
 		this.pas = pas;
 	}
-	
+
 	// Metódos
 	
 	/** 
@@ -109,10 +113,10 @@ public class MedidorDePressao {
   	 (Milímetro de mercúrio) e exibir a classficação, de "Normal" até "Hipertensão sistólica isolada".
 	**/
 	
-	public static String definirPaNormal(double pad, double pas, String classificacao) {
-		
+	public static String definirPaNormal(double pad, double pas, String situacao) {
+		 
 		if (pad < 85.0 && pas < 130.0) {
-			return "Normal";
+			situacao = "Normal";
 		}
 		else if (pad < 85.0 && pad < 89.0 && pas < 130.0 && pas < 139.0){
 			return "Normal limítrofe";
@@ -130,8 +134,9 @@ public class MedidorDePressao {
 			return "Hipertensão sistólica isolada";
 		}
 		else{
-			throw new IllegalArgumentException("PAS ou PAD incorretos. Digite novamente.");
+			return "PAS ou PAD incorretos. Digite novamente";
 		}
+		return situacao;
 
 	}
 	
@@ -298,7 +303,4 @@ public class MedidorDePressao {
 		}
 			  }
 		
-	
-	
-	
 }
