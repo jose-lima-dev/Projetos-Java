@@ -2,7 +2,6 @@ package projeto01_medidor_de_pressão;
 
 public class MedidorDePressao {
 	
-	private static String situacao;
 	/**
 	 * Informações:
 	 * 
@@ -15,7 +14,7 @@ public class MedidorDePressao {
 	// Atributos:
 	
 	private int idPaciente;
-	private String nome;
+	private String nomePaciente;
 	private String sexo;
 	private int idade;
 	private int idadeGestacional;
@@ -29,8 +28,8 @@ public class MedidorDePressao {
 		return idPaciente;
 	}
 	
-	public String getNome(){
-		return nome;
+	public String getNomePaciente(){
+		return nomePaciente;
 	}
 	
 	public String getSexo() {
@@ -63,8 +62,8 @@ public class MedidorDePressao {
 		this.idPaciente = idPaciente;
 	}
 	
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setNomePaciente(String nome) {
+		this.nomePaciente = nome;
 	}
 	
 	public void setSexo(String sexo) {
@@ -93,14 +92,9 @@ public class MedidorDePressao {
 	
 	// Construtor
 	
-	public MedidorDePressao(int idPaciente, String sexo, String nome, int idadeGestacional, int idade, double pas, double pad) {
-		super();
+	public MedidorDePressao(int idPaciente, String nomePaciente, double pas, double pad) {
 		this.idPaciente = idPaciente;
-		this.nome = nome;
-		this.sexo = sexo;
-		this.idade = idade;
-		this.idadeGestacional = idadeGestacional;
-		//this.classificacao = classificacao;
+		this.nomePaciente = nomePaciente;
 		this.pad = pad;
 		this.pas = pas;
 	}
@@ -113,30 +107,29 @@ public class MedidorDePressao {
   	 (Milímetro de mercúrio) e exibir a classficação, de "Normal" até "Hipertensão sistólica isolada".
 	**/
 	
-	public static String definirPaNormal(double pad, double pas, String situacao) {
+	public static String definirPaNormal(double pad, double pas) {
 		 
 		if (pad < 85.0 && pas < 130.0) {
-			situacao = "Normal";
+			return "Normal.";
 		}
-		else if (pad < 85.0 && pad < 89.0 && pas < 130.0 && pas < 139.0){
-			return "Normal limítrofe";
+		else if (pad > 85.0 && pad < 89.0 && pas > 130.0 && pas < 139.0){
+			return "Normal limítrofe.";
 		}
-		else if (pad < 90.0 && pad < 99.0 && pas < 140.0 && pas < 159.0) {
-			return "Hipertensão leve (estágio 1)";
+		else if (pad > 90.0 && pad < 99.0 && pas > 140.0 && pas < 159.0) {
+			return "Hipertensão leve (estágio 1).";
 		}
-		else if (pad < 100.0 && pad < 109.0 && pas < 160.0 && pas < 179.0) {
-			return "Hipertensão moderada (estágio 2)";
+		else if (pad > 100.0 && pad < 109.0 && pas > 160.0 && pas < 179.0) {
+			return "Hipertensão moderada (estágio 2).";
 		}
 		else if (pad >= 110.0 && pas >= 180.0) {
-			return "Hipertensão grave (estágio 3";
+			return "Hipertensão grave (estágio 3).";
 		}
 		else if (pad < 90.0 && pas >= 140.0) {
 			return "Hipertensão sistólica isolada";
 		}
 		else{
-			return "PAS ou PAD incorretos. Digite novamente";
+			return "PAS ou PAD incorretos. Digite novamente.";
 		}
-		return situacao;
 
 	}
 	
