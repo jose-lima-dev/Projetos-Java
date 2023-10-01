@@ -10,9 +10,12 @@ Como Usar:
 
 2. Abra o projeto em sua IDE Java de escolha.
 
-3. Execute o arquivo AppMedidorDePressaoPa.java para iniciar o programa.
+3. Execute um dos arquivos iniciados com "App" para iniciar o programa.
 
 4. Siga as instruções na tela para inserir os dados do paciente e receber a44nálises de pressão arterial.
 
 5. Repita o processo conforme necessário.
 
+Contribuições
+
+Contribuições são bem-vindas! Se você deseja melhorar este projeto, sinta-se à vontade para criar um fork, fazer suas alterações e enviar um pull request. Toda ajuda é apreciada.
