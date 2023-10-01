@@ -19,3 +19,8 @@ Como Usar:
 Contribuições
 
 Contribuições são bem-vindas! Se você deseja melhorar este projeto, sinta-se à vontade para criar um fork, fazer suas alterações e enviar um pull request. Toda ajuda é apreciada.
+
+Licença
+
+Este projeto é distribuído sob a Licença MIT.
+
