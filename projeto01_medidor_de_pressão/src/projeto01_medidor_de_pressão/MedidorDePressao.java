@@ -125,6 +125,14 @@ public class MedidorDePressao {
 		this.sexo = sexo;
 	}
 
+	// Construtor (AppMedidorDePressaoPaGravidez)
+	
+	public MedidorDePressao(int idPaciente, String nomePaciente, int idadeGestacional) {
+		this.idPaciente = idPaciente;
+		this.nomePaciente = nomePaciente;
+		this.idadeGestacional = idadeGestacional;
+	}
+
 	// Metódos
 	
 	/** 
