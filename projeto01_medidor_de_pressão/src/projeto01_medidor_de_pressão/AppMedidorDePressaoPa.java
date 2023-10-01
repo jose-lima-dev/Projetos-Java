@@ -8,7 +8,6 @@ public class AppMedidorDePressaoPa {
 		Scanner scan = new Scanner(System.in);
 		
 		// Aplicação para exibir se a siutação de pressaão arterial (normal) do paciente.
-		// An application to display the patient's blood pressure situation (normal).
 		
 		boolean continuar = true;
 		

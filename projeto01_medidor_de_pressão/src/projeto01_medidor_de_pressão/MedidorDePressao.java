@@ -13,16 +13,18 @@ public class MedidorDePressao {
 	
 	// Atributos:
 	
-	private int idPaciente;
-	private String nomePaciente;
-	private String sexo;
-	private int idade;
-	private int idadeGestacional;
-	private String classificacao;
-	private double pad;
-	private double pas;
+	private int idPaciente; // Número de identificação única do paciente	
+	private String nomePaciente; // Nome do paciente
+	private String sexo; // Sexo do paciente	
+	private int idade; // Idade do paciente
+	private int idadeGestacional; // Idade gestacional (aplicável a pacientes grávidas)
+	private String classificacao; // Classificação da pressão arterial
+	private double pad; // Pressão Arterial Diastólica (PAD) em MMHG
+	private double pas; // Pressão Arterial Sistólica (PAS) em MMHG
 	
-	// Getters:
+	// Getters e Setters:
+	
+	// Getters para acessar os atributos
 	
 	public int getIdPaciente() {
 		return idPaciente;
@@ -56,7 +58,7 @@ public class MedidorDePressao {
 		return pas;
 	}
 	
-	// Setters:
+	// Setters para definir os atributos
 	
 	public void setIdPaciente(int idPaciente) {
 		this.idPaciente = idPaciente;
@@ -92,19 +94,42 @@ public class MedidorDePressao {
 	
 	// Construtor
 	
-	public MedidorDePressao(int idPaciente, String nomePaciente, double pas, double pad) {
+	// Construtor para inicializar o objeto com valores iniciais
+	
+	public MedidorDePressao(int idPaciente, String nomePaciente, String sexo, int idade, int idadeGestacional, String classificacao, double pas, double pad) {
 		this.idPaciente = idPaciente;
 		this.nomePaciente = nomePaciente;
+		this.sexo = sexo;
+		this.idade = idade;
+		this.idadeGestacional = idadeGestacional;
+		this.classificacao = classificacao;
 		this.pad = pad;
 		this.pas = pas;
+	}
+	
+	// Construtor (AppMedidorDePressaoPa)
+	
+	public MedidorDePressao(int idPaciente, String nomePaciente, double valorPas, double valorPad) {
+		this.idPaciente = idPaciente;
+		this.nomePaciente = nomePaciente;
+		this.pas = valorPas;
+		this.pad = valorPad;
+	}
+	
+	// Construtor (AppMedidorDePressaoPaIdade)
+	
+	public MedidorDePressao(int idPaciente, String nomePaciente, int idade, String sexo) {
+		this.idPaciente = idPaciente;
+		this.nomePaciente = nomePaciente;
+		this.idade = idade;
+		this.sexo = sexo;
 	}
 
 	// Metódos
 	
 	/** 
-	 Este metódo vai definir sua PA (Presão Arterial) normal de acordo com a sua 
-	 PAD (Pressão Arterial Diastólica) e PAS (Pressão Arterial Sistólica) em MMHG
-  	 (Milímetro de mercúrio) e exibir a classficação, de "Normal" até "Hipertensão sistólica isolada".
+	 Este método define a classificação da pressão arterial com base nos valores de PAD e PAS em MMHG.
+	 Retorna uma string indicando a classificação, como "Normal" ou "Hipertensão grave".
 	**/
 	
 	public static String definirPaNormal(double pad, double pas) {
@@ -134,9 +159,9 @@ public class MedidorDePressao {
 	}
 	
 	/** 
-	  Este metódo vai definir sua PA (Pressão Arterial) de acordo com a sua idade e sexo,exibindo 
-	  os valores de MMHG (Milímetro de mercúrio) determindados por autoridades de saúde. 
- 	**/
+	 Este método define a classificação da pressão arterial com base na idade e sexo do paciente.
+	 Retorna uma string com os valores médios de MMHG recomendados.
+	**/
 	
 	public static String definirPaIdade(String sexo, int idade) {
 		if (idade <= 0) {
@@ -146,7 +171,7 @@ public class MedidorDePressao {
 			return "120/79 mmHg.";
 		}
 		else if ((idade >= 25) && (idade <= 29)) {
-			if ("Mulher".equals(sexo) || "mulher".equals(sexo)) {
+			if ("Feminino".equals(sexo) || "mulher".equals(sexo)) {
 				return "120/80 mmHg.";
 			}
 			else {
@@ -154,7 +179,7 @@ public class MedidorDePressao {
 			}
 		}
 		else if ((idade >= 30) && (idade <= 35)) {
-			if ("Mulher".equals(sexo) || "mulher".equals(sexo)) {
+			if ("Feminino".equals(sexo) || "mulher".equals(sexo)) {
 				return "122/81 mmHg.";
 			}
 			else {
@@ -162,7 +187,7 @@ public class MedidorDePressao {
 			}
 		}
 		else if ((idade >= 36) && (idade <= 39)) {
-			if ("Mulher".equals(sexo) || "mulher".equals(sexo)) {
+			if ("Feminino".equals(sexo) || "mulher".equals(sexo)) {
 				return "123/82 mmHg.";
 			}
 			else {
@@ -170,7 +195,7 @@ public class MedidorDePressao {
 			}
 		}
 		else if ((idade >= 40) && (idade <= 45)) {
-			if ("Mulher".equals(sexo) || "mulher".equals(sexo)) {
+			if ("Feminino".equals(sexo) || "feminino".equals(sexo)) {
 				return "124/83 mmHg.";
 			}
 			else {
@@ -178,7 +203,7 @@ public class MedidorDePressao {
 			}
 		}
 		else if ((idade >= 46) && (idade <= 49)) {
-			if ("Mulher".equals(sexo) || "mulher".equals(sexo)) {
+			if ("Feminino".equals(sexo) || "feminino".equals(sexo)) {
 				return "124/83 mmHg.";
 			}
 			else {
@@ -186,7 +211,7 @@ public class MedidorDePressao {
 			}
 		}	
 		else if ((idade >= 50) && (idade <= 55)) {
-			if ("Mulher".equals(sexo) || "mulher".equals(sexo)) {
+			if ("Feminino".equals(sexo) || "feminino".equals(sexo)) {
 				return "129/85 mmHg.";
 			}
 			else {
@@ -194,7 +219,7 @@ public class MedidorDePressao {
 			}
 		}	
 		else if ((idade >= 56) && (idade <= 59)) {
-			if ("Mulher".equals(sexo) || "mulher".equals(sexo)) {
+			if ("Feminino".equals(sexo) || "feminino".equals(sexo)) {
 				return "130/86 mmHg.";
 			}
 			else {
@@ -202,7 +227,7 @@ public class MedidorDePressao {
 			}
 		}	
 		else if (idade > 60) {
-			if ("Mulher".equals(sexo) || "mulher".equals(sexo)) {
+			if ("Feminino".equals(sexo) || "feminino".equals(sexo)) {
 				return "134/84 mmHg.";
 			}
 			else {
@@ -215,8 +240,8 @@ public class MedidorDePressao {
 			}
 	
 	/** 
-	  Este metódo vai definir os valores da sua PA (Pressão Arterial) de acordo com a sua idade gestacional, exibindo 
-	  os valores médios do PAS (Pressão Arterial Sistólica) e PAD (Pressão Arterial Diastólica) determindados por autoridades de saúde. 
+	 Este método define a classificação da pressão arterial com base na idade gestacional (para pacientes grávidas).
+	 Retorna uma string com os valores médios de PAS e PAD em MMHG para cada período de gestação.
 	**/
 
 	public static String definirPaGravidez(int idadeGestacional) {
@@ -271,8 +296,8 @@ public class MedidorDePressao {
 	 		}
 
 	/** 
-	  Este metódo vai definir os valores máximos de PA (Pressão Arterial) na infância de acordo com a idade, exibindo 
-	  os valores do PAS (Pressão Arterial Sistólica) e PAD (Pressão Arterial Diastólica) determindados por autoridades de saúde. 
+	 Este método define a classificação da pressão arterial na infância com base na idade do paciente.
+	 Retorna uma string com os valores recomendados de PAS e PAD em MMHG.
 	**/
 	
 	public static String definirPaInfancia(int idade) {
