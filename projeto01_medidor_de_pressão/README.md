@@ -1,10 +1,12 @@
-Projeto 01
+**Projeto 01**
 
-Medidor de Pressão Arterial:
+**Medidor de Pressão Arterial:**
 
 Este é um projeto simples de um "Medidor de Pressão Arterial" em Java, que permite aos usuários inserir informações do paciente, como ID, nome, idade, sexo e valores de Pressão Arterial Sistólica (PAS) e Diastólica (PAD). Com base nessas informações, o sistema fornece uma análise da pressão arterial do paciente.
 
-Como Usar:
+O mesmo foi desenvolvido de acordo com as informações médicas do artigo: https://telemedicinamorsch.com.br/blog/tabela-de-pressao-arterial, por Dr. José Aldair Morsch, 20 de outubro de 2021. MORSCH® Telemedicina.
+
+**Como Usar:**
 
 1. Clone ou faça o download deste repositório para o seu ambiente de desenvolvimento Java.
 
@@ -16,11 +18,11 @@ Como Usar:
 
 5. Repita o processo conforme necessário.
 
-Contribuições
+**Contribuições**
 
 Contribuições são bem-vindas! Se você deseja melhorar este projeto, sinta-se à vontade para criar um fork, fazer suas alterações e enviar um pull request. Toda ajuda é apreciada.
 
-Licença
+**Licença**
 
 Este projeto é distribuído sob a Licença MIT.
 
