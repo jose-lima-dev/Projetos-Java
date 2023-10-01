@@ -5,7 +5,9 @@ import java.util.Scanner;
 public class AppMedidorDePressaoPaGravidez{
 
     public static void main(String[] args){
-        Scanner scan = new Scanner(System.int);
+        Scanner scan = new Scanner(System.in);
+        
+        boolean continuar = true;
 
         // Inicio do loop
 
@@ -15,13 +17,13 @@ public class AppMedidorDePressaoPaGravidez{
             
             System.out.println("\nMedidor de pressão\n");
 
-            System.out.print("Informe o ID da paciente.........:" )
-            int idPaciente = scan.nextInt;
+            System.out.print("Informe o ID da paciente.........: ");
+            int idPaciente = scan.nextInt();
 
-            System.out.print("Informe seu nome.................: ")
-            String nomePaciente = nextLine();
+            System.out.print("Informe seu nome.................: ");
+            String nomePaciente = scan.next();
 
-            System.out.print("Informe sua idade gestacional....: ")
+            System.out.print("Informe sua idade gestacional....: ");
             int idadeGestacional = scan.nextInt();
 
             // Instância
@@ -36,7 +38,7 @@ public class AppMedidorDePressaoPaGravidez{
 			System.out.println("Nome da paciente..............: " + medidorDePaGravidez.getNomePaciente());
 			System.out.println("Idade gestacional.............: " + medidorDePaGravidez.getIdadeGestacional());
 
-            String situacaoPaGravidez = MedidorDePressao.definirPaGravidez(idadeGestaciona);
+            String situacaoPaGravidez = MedidorDePressao.definirPaGravidez(idadeGestacional);
             System.out.println("\nClassificação da pressão arterial em mmhg (milímetro de mercúrio)..............: " + situacaoPaGravidez);
             
             // Resposta para decidir se continua ou sai do loop
