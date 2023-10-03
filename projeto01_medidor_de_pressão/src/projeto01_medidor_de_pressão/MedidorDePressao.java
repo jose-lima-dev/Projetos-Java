@@ -125,6 +125,14 @@ public class MedidorDePressao {
 		this.sexo = sexo;
 	}
 
+	// Construtor (AppMedidorDePressaoPaGravidez)
+	
+	public MedidorDePressao(int idPaciente, String nomePaciente, int idadeGestacional) {
+		this.idPaciente = idPaciente;
+		this.nomePaciente = nomePaciente;
+		this.idadeGestacional = idadeGestacional;
+	}
+
 	// Metódos
 	
 	/** 
@@ -249,7 +257,7 @@ public class MedidorDePressao {
 			 throw new IllegalArgumentException("A idade não pode ser negativa ou igua a 0. Tente novamente.");
 		 }
 		 else if (idadeGestacional > 6 && idadeGestacional < 8) {
-			 return "Média da Pressão Sistólica (PAS) = 103 a 104 mmHg\nMédia da Pressão Diastólica (PAD) = 57 a 58 mmHg";
+			 return "\nMédia da Pressão Sistólica (PAS) = 103 a 104 mmHg\nMédia da Pressão Diastólica (PAD) = 57 a 58 mmHg";
 		 }
 		 else if (idadeGestacional >= 9 && idadeGestacional <= 12) {
 			 return "Média da Pressão Sistólica (PAS) = 106 a 108 mmHg\nMédia da Pressão Diastólica (PAD) = 61 a 63 mmHg";

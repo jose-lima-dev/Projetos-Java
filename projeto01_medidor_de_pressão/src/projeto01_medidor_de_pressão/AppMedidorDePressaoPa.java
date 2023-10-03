@@ -7,8 +7,6 @@ public class AppMedidorDePressaoPa {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 		
-		// Aplicação para exibir se a siutação de pressaão arterial (normal) do paciente.
-		
 		boolean continuar = true;
 		
 		// Inicio do loop
@@ -33,7 +31,7 @@ public class AppMedidorDePressaoPa {
 			System.out.print("Digite o valor do PAS (Pressão Arterial Sistólica) do paciente: ");
 			double valorPas = scan.nextDouble();
 			
-			// Construtor
+			// Instância
 			
 			MedidorDePressao medidorDePressaoArterial = new MedidorDePressao(idPaciente, nomePaciente, valorPas, valorPad);
 			
