@@ -1,0 +1,43 @@
+Gerenciamento de Livros
+Adicionar livro:
+    Título
+    Autor
+    ISBN (Número Padrão Internacional de Livro)
+    Número de cópias disponíveis
+Editar informações do livro.
+Excluir livro.
+Exibir lista de todos os livros da biblioteca.
+
+Gerenciamento de Usuários
+Adicionar usuário:
+    Nome
+    Número de identificação
+    Histórico de empréstimos
+Editar informações do usuário.
+Excluir usuário.
+
+Empréstimo e Devolução
+Verificar disponibilidade de um livro.
+Permitir empréstimo de livro:
+    Registrar data de empréstimo
+    Associar livro ao usuário
+Permitir devolução de livro:
+    Registrar data de devolução
+
+Relatórios
+Gerar relatórios:
+    Livros emprestados
+    Datas de devolução
+    Status de empréstimo
+
+Interface Gráfica de Usuário (GUI)
+Interface em terminal:
+    Menu interativo para facilitar o uso.
+
+Segurança
+Autenticação de usuário:
+    Administrador
+    Usuário regular
+Controle de permissões:
+    Administradores podem gerenciar livros, usuários e relatórios.
+    Usuários regulares podem emprestar e devolver livros.
