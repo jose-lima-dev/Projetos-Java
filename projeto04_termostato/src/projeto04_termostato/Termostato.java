@@ -45,7 +45,7 @@ public class Termostato {
 	// Construtor da classe
 	public Termostato() {
 		this.ligado = false; // Inicialmente, o termostato está desligado.
-		this.temperatura = 0; // A temperatura começa em 0 graus Celsius.	
+		this.temperatura = 80; // A temperatura começa em 0 graus Celsius.	
 		this.temperaturaMin = 80; // Define a temperatura mínima como 80 graus Celsius.
 		this.temperaturaMax = 85; // Define a temperatura máxima como 85 graus Celsius.
 	}

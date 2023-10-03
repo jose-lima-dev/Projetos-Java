@@ -26,11 +26,11 @@ public class AplicacaoPneu {
 		//Método para mostrar informações do pneu
 		public static void mostrarInformacoesPneu(Pneu pneu) {
 			System.out.println("Informacoes do pneu: ");
-	        System.out.println("ID do Pneu:............... " + pneu.getIdPneu());
-	        System.out.println("Modelo:................... " + pneu.getModelo());
-	        System.out.println("Índice de Vida:........... " + pneu.getIndiceDeVida());
-	        System.out.println("Estado:................... " + pneu.getEstado());
-	        System.out.println("Horas de Uso:............. " + pneu.getHorasDeUso());
+	        System.out.println("ID do Pneu...............: " + pneu.getIdPneu());
+	        System.out.println("Modelo...................: " + pneu.getModelo());
+	        System.out.println("Índice de Vida...........: " + pneu.getIndiceDeVida());
+	        System.out.println("Estado...................: " + pneu.getEstado());
+	        System.out.println("Horas de Uso:............: " + pneu.getHorasDeUso());
 	        System.out.println();
 		}
 		
