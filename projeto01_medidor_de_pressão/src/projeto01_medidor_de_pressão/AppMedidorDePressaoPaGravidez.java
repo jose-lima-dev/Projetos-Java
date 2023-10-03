@@ -1,15 +1,5 @@
 package projeto01_medidor_de_pressão;
 
-<<<<<<< HEAD
-public class AppMedidorDePressaoPaGravidez {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
-}
-=======
 import java.util.Scanner;
 
 public class AppMedidorDePressaoPaGravidez{
@@ -65,4 +55,4 @@ public class AppMedidorDePressaoPaGravidez{
         scan.close();
     } 
 }
->>>>>>> 3ecde5ecf2731dfad5aaedf586bcc5175ce782da
+

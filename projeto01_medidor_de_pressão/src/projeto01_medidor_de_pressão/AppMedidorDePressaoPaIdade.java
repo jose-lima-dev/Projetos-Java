@@ -41,11 +41,7 @@ public class AppMedidorDePressaoPaIdade {
 			System.out.println("Nome do paciente..............: " + medidorDePaIdade.getNomePaciente());
 			System.out.println("Idade do paciente.............: " + medidorDePaIdade.getIdade());
 			System.out.println("Sexo..........................: " + medidorDePaIdade.getSexo());
-<<<<<<< HEAD
-			
-=======
 
->>>>>>> 3ecde5ecf2731dfad5aaedf586bcc5175ce782da
 			String situacaoPaIdade = MedidorDePressao.definirPaIdade(sexo, idade);
 			System.out.println("\nClassificação da pressão arterial em mmhg (ilímetro de mercúrio)..............: " + situacaoPaIdade);
 			
