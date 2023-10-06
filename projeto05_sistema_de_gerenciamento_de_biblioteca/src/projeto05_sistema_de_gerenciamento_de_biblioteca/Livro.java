@@ -4,10 +4,10 @@ public class Livro {
 
     private String titulo;
     private String autor;
-    private String isbn;
+    private int isbn;
     private int copiasDisponiveis;
     
-    public Livro(String titulo, String autor, String isbn, int copiasDisponiveis) {
+    public Livro(String titulo, String autor, int isbn, int copiasDisponiveis) {
         this.titulo = titulo;
         this.autor = autor;
         this.isbn = isbn;
@@ -25,10 +25,10 @@ public class Livro {
     public void setAutor(String autor) {
         this.autor = autor;
     }
-    public String getIsbn() {
+    public int getIsbn() {
         return isbn;
     }
-    public void setIsbn(String isbn) {
+    public void setIsbn(int isbn) {
         this.isbn = isbn;
     }
     public int getCopiasDisponiveis() {

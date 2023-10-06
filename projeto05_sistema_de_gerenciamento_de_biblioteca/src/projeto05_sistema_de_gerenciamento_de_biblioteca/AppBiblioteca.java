@@ -1,5 +1,7 @@
 package projeto05_sistema_de_gerenciamento_de_biblioteca;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class AppBiblioteca {
@@ -8,6 +10,8 @@ public class AppBiblioteca {
         Scanner scan = new Scanner(System.in);
 
         boolean continuar = true;
+
+        List<Livro> livros = new ArrayList<>();
 
         while (continuar) {
 
@@ -25,38 +29,59 @@ public class AppBiblioteca {
             System.out.println("|     10. Sair               |");
             System.out.println("|____________________________|");
 
-            System.out.print("Informe o que deseja (de acordo com o número, de 1 a 10): ");
+            System.out.print("\nInforme o que deseja (de acordo com o número, de 1 a 10): ");
             int opcao = scan.nextInt();
 
             switch (opcao) {
-                case '1':
+                case 1:
+                    System.out.println("\nAdicionar livro");
+                    
+                    System.out.print("\nTítulo: ");
+                    String titulo = scan.nextLine();
+                    scan.nextLine();
+                    System.out.print("Autor: ");
+                    String autor = scan.nextLine();
+                    System.out.print("ISBN: ");
+                    int isbn = scan.nextInt();
+                    System.out.print("Número de cópias disponíveis: ");
+                    int copiasDisponiveis = scan.nextInt();
+
+                    Livro novoLivro = new Livro(titulo, autor, isbn, copiasDisponiveis);
+                    livros.add(novoLivro);
+
+                    System.out.print("\nLivro adicionado com sucesso!\n");
                     break;
-                case '2':
+                case 2:
                     break;
-                case '3':
+                case 3:
                     break;
-                case '4':
+                case 4:
                     break;
-                case '5':
+                case 5:
                     break;
-                case '6':
+                case 6:
                     break;
-                case '7':
+                case 7:
                     break;
-                case '8':
+                case 8:
                     break;
-                case '9':
+                case 9:
+                    break;
+                case 10:
+                    continuar = false;
+                    System.out.println("\nFim da aplicação. Agradeço pelo uso!");
                     break;
                 default: 
-                    System.out.print("Opção inválida. Tente novamente.");
+                    System.out.print("\nOpção inválida. Tente novamente.");
                     break;
                 
             }
-            scan.close();
+           
         }
-        
-
-        
-
+        scan.close();
     }
+        
+
+        
+
 }
