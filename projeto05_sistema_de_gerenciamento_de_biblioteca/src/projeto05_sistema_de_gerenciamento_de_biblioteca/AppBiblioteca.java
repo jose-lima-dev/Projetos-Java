@@ -51,8 +51,37 @@ public class AppBiblioteca {
 
                     System.out.print("\nLivro adicionado com sucesso!\n");
                     break;
+
                 case 2:
+                System.out.println("\nEditar livro");
+                System.out.print("Título do livro a ser editado: ");
+                String tituloAntigo = scan.nextLine();
+                System.out.print("Novo título: ");
+                String novoTitulo = scan.nextLine();
+                System.out.print("Novo autor: ");
+                String novoAutor = scan.nextLine();
+                System.out.print("Novo ISBN: ");
+                int novoIsbn = scan.nextInt();
+
+                // Procurar pelo livro a ser editado.
+                boolean encontrado = false;
+                for (Livro livro : livros) {
+                    if (livro.getTitulo().equals(tituloAntigo)) {
+                        // Se encontrou o livro, faça a edição.
+                        livro.setTitulo(novoTitulo);
+                        livro.setAutor(novoAutor);
+                        livro.setIsbn(novoIsbn);
+                        encontrado = true;
+                        System.out.println("Livro editado com sucesso!");
+                        break;
+                    }
+                }
+
+                if (!encontrado) {
+                    System.out.println("Livro não encontrado na biblioteca.");
+                }
                     break;
+                    
                 case 3:
                     break;
                 case 4:
